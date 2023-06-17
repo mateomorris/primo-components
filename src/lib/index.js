@@ -1,1 +1,2 @@
-// Reexport your entry components here
+// Reexport your entry Svelte components here
+export { default as Button } from './Tester.svelte';
