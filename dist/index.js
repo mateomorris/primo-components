@@ -1,6 +1,6 @@
 // Reexport your entry Svelte components here
-export { default as Button } from './Tester.svelte';
+export { default as Tester } from './Tester.svelte';
 
 export default {
-  Button
+  Tester
 }

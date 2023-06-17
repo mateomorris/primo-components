@@ -1,9 +1,19 @@
 <script>
-	import Heading from './Heading.svelte';
+	import { Line } from 'svelte-chartjs';
+	import { data } from './data.js';
 
-	export let foo = 'EMPTY';
+	import {
+		Chart as ChartJS,
+		Title,
+		Tooltip,
+		Legend,
+		LineElement,
+		LinearScale,
+		PointElement,
+		CategoryScale
+	} from 'chart.js';
+
+	ChartJS.register(Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale);
 </script>
 
-<Heading />
-<h1>This is the BRAND NEW tester</h1>
-<h2>The prop value is {foo}</h2>
+<Line {data} options={{ responsive: true }} />

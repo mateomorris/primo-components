@@ -1,5 +1,5 @@
-export { default as Button } from "./Tester.svelte";
+export { default as Tester } from "./Tester.svelte";
 declare namespace _default {
-    let Button: any;
+    let Tester: any;
 }
 export default _default;
