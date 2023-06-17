@@ -7766,15 +7766,11 @@ function Qc(i) {
 function th(i) {
   return ei.register(uc, vc, dc, te, Si, He, Mi), [];
 }
-let nh = class extends Fi {
+class nh extends Fi {
   constructor(t) {
     super(), Ai(this, t, th, Qc, Pi, {});
   }
-};
-const rh = {
-  Tester
-};
+}
 export {
-  nh as Tester,
-  rh as default
+  nh as Tester
 };
