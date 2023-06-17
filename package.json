@@ -41,5 +41,9 @@
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"chart.js": "^4.3.0",
+		"svelte-chartjs": "^3.1.2"
+	}
 }
