@@ -1,5 +1,4 @@
 <script>
-	import { SvelteGantt, SvelteGanttTable } from 'svelte-gantt';
 	import Heading from './Heading.svelte';
 
 	export let foo = 'EMPTY';
