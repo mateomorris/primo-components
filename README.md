@@ -1,20 +1,28 @@
-# create-svelte
+This repo demonstrates how you could manage a library of components, or even a whole application, outside of Primo & consume them from within Primo. This allows you to do the heavy lifting of managing your components and app logic from the comfort of VSCode, while enabling page building and content editing from Primo. Your components are bundled and deployed to a repo, from which you import your components from Primo
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+From a Primo block's HTML:
+`<div bind:this={el}></div>`
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+And JS:
 ```
+import { Tester } from "https://raw.githubusercontent.com/mateomorris/primo-components/master/build/myapp.js";
+
+let el;
+$: if (el) {
+  new Tester({
+    target: el,
+    props: {
+      foo,
+    },
+  });
+}
+```
+
+Or for smaller components: 
+
+JS: `import { Tester } from "https://raw.githubusercontent.com/mateomorris/primo-components/master/dist/Heading.svelte";`
+
+HTML: `<Tester />`
 
 ## Developing
 
